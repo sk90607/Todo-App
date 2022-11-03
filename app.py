@@ -49,11 +49,6 @@ def delete(sno):
     db.session.commit()
     return redirect('/')
 
-@app.route('/show')
-def products():
-    allTodo = Todo.query.all()
-    print(allTodo)
-    return 'products page'
 
 if __name__ == "__main__":
     app.run(debug=True, port=8000)
